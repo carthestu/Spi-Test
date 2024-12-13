@@ -3,13 +3,12 @@ import board
 import digitalio
 import adafruit_mcp3xxx.mcp3008 as MCP
 from adafruit_mcp3xxx.analog_in import AnalogIn
-from adafruit_blinka.microcontroller.generic_linux.libgpiod_pin import Pin
-import bitbangio
+import adafruit_bitbangio as bitbangio
 
 # Define the software SPI pins
-SCLK = Pin(11)  # GPIO 11
-MOSI = Pin(10)  # GPIO 10
-MISO = Pin(9)   # GPIO 9
+SCLK = board.D11  # GPIO 11
+MOSI = board.D10  # GPIO 10
+MISO = board.D9   # GPIO 9
 CS = digitalio.DigitalInOut(board.D22)  # GPIO 22
 
 # Create the SPI bus
